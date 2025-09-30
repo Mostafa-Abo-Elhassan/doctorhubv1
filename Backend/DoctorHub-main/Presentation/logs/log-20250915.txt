@@ -1,0 +1,24 @@
+2025-09-15 00:43:21.368 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-15 00:44:19.664 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-15 00:44:33.789 +03:00 [ERR] Failed executing DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [fileDicoments] (
+    [Id] int NOT NULL IDENTITY,
+    [FileName] nvarchar(200) NOT NULL,
+    [Url] nvarchar(500) NOT NULL,
+    [UploadedAt] datetime2 NOT NULL,
+    [LabResultId] int NOT NULL,
+    [LabOrederId] int NOT NULL,
+    CONSTRAINT [PK_fileDicoments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_fileDicoments_labOredrs_LabOrederId] FOREIGN KEY ([LabOrederId]) REFERENCES [labOredrs] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_fileDicoments_labResults_LabResultId] FOREIGN KEY ([LabResultId]) REFERENCES [labResults] ([Id]) ON DELETE CASCADE
+);
+2025-09-15 00:48:00.232 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-15 00:48:00.716 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-15 00:50:05.480 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-15 00:51:28.042 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-15 00:51:45.726 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-15 18:06:36.630 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-15 18:07:29.666 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-15 18:58:48.641 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-15 18:59:08.132 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-15 19:00:33.620 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.

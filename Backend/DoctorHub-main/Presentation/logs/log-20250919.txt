@@ -1,0 +1,206 @@
+2025-09-19 19:10:17.241 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:11:14.854 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:11:38.008 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:12:19.447 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:12:39.093 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:13:15.236 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:13:20.670 +03:00 [ERR] Failed executing DbCommand (533ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [labResults] (
+    [Id] int NOT NULL IDENTITY,
+    [LapName] nvarchar(max) NOT NULL,
+    [LicenseNumber] nvarchar(max) NULL,
+    [DoctorName] nvarchar(max) NOT NULL,
+    [Type] nvarchar(max) NOT NULL,
+    [UploadedAt] datetime2 NOT NULL,
+    [Speciality] nvarchar(max) NOT NULL,
+    [PatientId] nvarchar(450) NOT NULL,
+    [LabID] int NOT NULL,
+    [LabOrderId] int NOT NULL,
+    CONSTRAINT [PK_labResults] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_labResults_Patients_PatientId] FOREIGN KEY ([PatientId]) REFERENCES [Patients] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labResults_labOredrs_LabOrderId] FOREIGN KEY ([LabOrderId]) REFERENCES [labOredrs] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labResults_labs_LabID] FOREIGN KEY ([LabID]) REFERENCES [labs] ([Id]) ON DELETE CASCADE
+);
+2025-09-19 19:14:50.873 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:14:51.846 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:16:14.967 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:16:52.188 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:17:06.367 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:17:08.557 +03:00 [ERR] Failed executing DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [labResults] (
+    [Id] int NOT NULL IDENTITY,
+    [LapName] nvarchar(max) NOT NULL,
+    [LicenseNumber] nvarchar(max) NULL,
+    [DoctorName] nvarchar(max) NOT NULL,
+    [Type] nvarchar(max) NOT NULL,
+    [UploadedAt] datetime2 NOT NULL,
+    [Speciality] nvarchar(max) NOT NULL,
+    [PatientId] nvarchar(450) NOT NULL,
+    [LabID] int NOT NULL,
+    [LabOrderId] int NOT NULL,
+    CONSTRAINT [PK_labResults] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_labResults_Patients_PatientId] FOREIGN KEY ([PatientId]) REFERENCES [Patients] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labResults_labOredrs_LabOrderId] FOREIGN KEY ([LabOrderId]) REFERENCES [labOredrs] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labResults_labs_LabID] FOREIGN KEY ([LabID]) REFERENCES [labs] ([Id]) ON DELETE CASCADE
+);
+2025-09-19 19:20:09.376 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:20:22.189 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:20:44.327 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:20:45.379 +03:00 [ERR] Failed executing DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [labResults] (
+    [Id] int NOT NULL IDENTITY,
+    [LapName] nvarchar(max) NOT NULL,
+    [LicenseNumber] nvarchar(max) NULL,
+    [DoctorName] nvarchar(max) NOT NULL,
+    [Type] nvarchar(max) NOT NULL,
+    [UploadedAt] datetime2 NOT NULL,
+    [Speciality] nvarchar(max) NOT NULL,
+    [PatientId] nvarchar(450) NOT NULL,
+    [LabID] int NOT NULL,
+    [LabOrderId] int NOT NULL,
+    CONSTRAINT [PK_labResults] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_labResults_Patients_PatientId] FOREIGN KEY ([PatientId]) REFERENCES [Patients] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labResults_labOredrs_LabOrderId] FOREIGN KEY ([LabOrderId]) REFERENCES [labOredrs] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labResults_labs_LabID] FOREIGN KEY ([LabID]) REFERENCES [labs] ([Id]) ON DELETE CASCADE
+);
+2025-09-19 19:23:11.322 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:23:23.924 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:23:33.062 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:23:34.492 +03:00 [ERR] Failed executing DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [labResults] (
+    [Id] int NOT NULL IDENTITY,
+    [LapName] nvarchar(max) NOT NULL,
+    [LicenseNumber] nvarchar(max) NULL,
+    [DoctorName] nvarchar(max) NOT NULL,
+    [Type] nvarchar(max) NOT NULL,
+    [UploadedAt] datetime2 NOT NULL,
+    [Speciality] nvarchar(max) NOT NULL,
+    [PatientId] nvarchar(450) NOT NULL,
+    [LabID] int NOT NULL,
+    [LabOrderId] int NOT NULL,
+    CONSTRAINT [PK_labResults] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_labResults_Patients_PatientId] FOREIGN KEY ([PatientId]) REFERENCES [Patients] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labResults_labOredrs_LabOrderId] FOREIGN KEY ([LabOrderId]) REFERENCES [labOredrs] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labResults_labs_LabID] FOREIGN KEY ([LabID]) REFERENCES [labs] ([Id])
+);
+2025-09-19 19:34:35.200 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:35:02.054 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:35:24.017 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:36:31.465 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:36:49.138 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:36:51.146 +03:00 [ERR] Failed executing DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [labResults] (
+    [Id] int NOT NULL IDENTITY,
+    [LapName] nvarchar(max) NOT NULL,
+    [LicenseNumber] nvarchar(max) NULL,
+    [DoctorName] nvarchar(max) NOT NULL,
+    [Type] nvarchar(max) NOT NULL,
+    [UploadedAt] datetime2 NOT NULL,
+    [Speciality] nvarchar(max) NOT NULL,
+    [PatientId] nvarchar(450) NOT NULL,
+    [LabID] int NOT NULL,
+    [LabOrderId] int NOT NULL,
+    CONSTRAINT [PK_labResults] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_labResults_Patients_PatientId] FOREIGN KEY ([PatientId]) REFERENCES [Patients] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labResults_labOredrs_LabOrderId] FOREIGN KEY ([LabOrderId]) REFERENCES [labOredrs] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labResults_labs_LabID] FOREIGN KEY ([LabID]) REFERENCES [labs] ([Id])
+);
+2025-09-19 19:38:58.172 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:41:44.774 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:42:21.035 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:42:22.401 +03:00 [ERR] Failed executing DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [labResults] (
+    [Id] int NOT NULL IDENTITY,
+    [LapName] nvarchar(max) NOT NULL,
+    [LicenseNumber] nvarchar(max) NULL,
+    [DoctorName] nvarchar(max) NOT NULL,
+    [Type] nvarchar(max) NOT NULL,
+    [UploadedAt] datetime2 NOT NULL,
+    [Speciality] nvarchar(max) NOT NULL,
+    [PatientId] nvarchar(450) NOT NULL,
+    [LabID] int NOT NULL,
+    [LabOrderId] int NOT NULL,
+    CONSTRAINT [PK_labResults] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_labResults_Patients_PatientId] FOREIGN KEY ([PatientId]) REFERENCES [Patients] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labResults_labOredrs_LabOrderId] FOREIGN KEY ([LabOrderId]) REFERENCES [labOredrs] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labResults_labs_LabID] FOREIGN KEY ([LabID]) REFERENCES [labs] ([Id])
+);
+2025-09-19 19:46:21.747 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:47:51.555 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:48:23.681 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:49:52.301 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:49:57.667 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:50:15.660 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 19:50:52.026 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:17:36.737 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:17:58.295 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:18:14.553 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:18:46.065 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:19:12.910 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:19:15.501 +03:00 [ERR] Failed executing DbCommand (68ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [labOredrs] (
+    [Id] int NOT NULL IDENTITY,
+    [LabID] int NOT NULL,
+    [PatientId] nvarchar(450) NOT NULL,
+    [DoctorId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_labOredrs] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_labOredrs_Doctors_DoctorId] FOREIGN KEY ([DoctorId]) REFERENCES [Doctors] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labOredrs_Patients_PatientId] FOREIGN KEY ([PatientId]) REFERENCES [Patients] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labOredrs_labs_LabID] FOREIGN KEY ([LabID]) REFERENCES [labs] ([Id])
+);
+2025-09-19 23:22:01.279 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:22:12.240 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:22:19.388 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:22:32.435 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:22:42.648 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:22:47.114 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:23:12.639 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:23:31.212 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:23:33.606 +03:00 [ERR] Failed executing DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [labOredrs] (
+    [Id] int NOT NULL IDENTITY,
+    [LabID] int NOT NULL,
+    [PatientId] nvarchar(450) NOT NULL,
+    [DoctorId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_labOredrs] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_labOredrs_Doctors_DoctorId] FOREIGN KEY ([DoctorId]) REFERENCES [Doctors] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labOredrs_Patients_PatientId] FOREIGN KEY ([PatientId]) REFERENCES [Patients] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labOredrs_labs_LabID] FOREIGN KEY ([LabID]) REFERENCES [labs] ([Id])
+);
+2025-09-19 23:26:37.283 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:27:10.198 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:27:25.344 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:27:36.989 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:28:01.632 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:28:03.900 +03:00 [ERR] Failed executing DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [labOredrs] (
+    [Id] int NOT NULL IDENTITY,
+    [LabID] int NOT NULL,
+    [PatientId] nvarchar(450) NOT NULL,
+    [DoctorId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_labOredrs] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_labOredrs_Doctors_DoctorId] FOREIGN KEY ([DoctorId]) REFERENCES [Doctors] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labOredrs_Patients_PatientId] FOREIGN KEY ([PatientId]) REFERENCES [Patients] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labOredrs_labs_LabID] FOREIGN KEY ([LabID]) REFERENCES [labs] ([Id])
+);
+2025-09-19 23:33:12.248 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:33:34.340 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:34:02.257 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:34:14.427 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:34:30.238 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:34:32.423 +03:00 [ERR] Failed executing DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [labOredrs] (
+    [Id] int NOT NULL IDENTITY,
+    [LabID] int NOT NULL,
+    [PatientId] nvarchar(450) NOT NULL,
+    [DoctorId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_labOredrs] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_labOredrs_Doctors_DoctorId] FOREIGN KEY ([DoctorId]) REFERENCES [Doctors] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labOredrs_Patients_PatientId] FOREIGN KEY ([PatientId]) REFERENCES [Patients] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_labOredrs_labs_LabID] FOREIGN KEY ([LabID]) REFERENCES [labs] ([Id])
+);
+2025-09-19 23:39:18.319 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:39:33.451 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:40:09.132 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:40:20.076 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-09-19 23:40:37.908 +03:00 [WRN] The property 'Doctor.WorkingDays' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
